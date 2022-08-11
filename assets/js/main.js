@@ -41,9 +41,8 @@ const scrollHeader = () => {
 	//
 	this.scrollY >= 50 ? header.classList.add('bg-header')
 					   : header.classList.remove('bg-header')
-
-	window.addEventListener('scroll', scrollHeader);
 }
+	window.addEventListener('scroll', scrollHeader);
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 
