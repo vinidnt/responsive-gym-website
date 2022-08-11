@@ -27,12 +27,23 @@ const linkAction = () => {
 	const navMenu = document.getElementById('nav-menu')
 	//When we click on each nav__link, we remove the show-menu class
 	navMenu.classList.remove('show-menu')
+	console.log("entrou 2")
 }
 
 navLink.forEach(e => e.addEventListener('click', linkAction))
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/
 
+const scrollHeader = () => {
+	const header = document.getElementById('header')
+	console.log("entrou 1")
+	//When the scroll is greater than 50 viewport height, add the scroll-header class to the header tag
+	//
+	this.scrollY >= 50 ? header.classList.add('bg-header')
+					   : header.classList.remove('bg-header')
+
+	window.addEventListener('scroll', scrollHeader);
+}
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 
