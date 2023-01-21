@@ -91,11 +91,11 @@ const calculateBmi = (e) => {
 		calculateMessage.classList.add('color-red')
 
 		//Show message
-		calculateMessage.textContent = 'Fill in the Height and Weight 👨‍💻'
+		calculateMessage.textContent = 'Preencha seu peso e altura. 👨‍💻'
 
 		setTimeout(() => {
 			calculateMessage.textContent = ''
-		}, 5000)
+		}, 15000)
 	} else {
 		//BMi Formula
 		const cm = calculateCm.value / 100,
@@ -106,13 +106,13 @@ const calculateBmi = (e) => {
 		if (bmi < 18.5) {
 			//Add color and display message
 			calculateMessage.classList.add('color-green')
-			calculateMessage.textContent = `Your BMI is ${bmi} and you are skinny 😔`
+			calculateMessage.textContent = `Seu IMC é ${bmi} e você está abaixo do peso ideal 😔`
 		} else if (bmi < 25) {
 			calculateMessage.classList.add('color-green')
-			calculateMessage.textContent = `Your BMI is ${bmi} and you are healthy 🥳`
+			calculateMessage.textContent = `Seu IMC é ${bmi} e você está no peso ideal. 🥳`
 		} else {
 			calculateMessage.classList.add('color-green')
-			calculateMessage.textContent = `Your BMI is ${bmi} and you are overwight 😔`
+			calculateMessage.textContent = `Seu IMC é ${bmi} e você está acima do peso. 😔`
 		}
 
 		// To clear the input field
@@ -147,17 +147,17 @@ const sendEmail = (e) => {
 		contactMessage.classList.remove('color-green')
 		contactMessage.classList.add('color-red')
 		// Show message
-		contactMessage.textContent = 'You must enter your email ☝'
+		contactMessage.textContent = 'Você deve inserir seu e-mail ☝'
 	} else {
 		// serviceID - templateID - #form - publicKey
 		emailjs.sendForm('service_ih1tuds', 'template_ksz7yeb', '#contact-form', 'zCQ6lIHtOb4JaRmie')
 			.then(() => {
 				// Show message and add color
 				contactMessage.classList.add('color-green')
-				contactMessage.textContent = 'You registered successfully 💪'
+				contactMessage.textContent = 'Você se inscreveu com sucesso. 💪'
 			},(error) => {
 				// Mail sending error
-				alert('OOPS! SOMETHING HAS FAILED...', error)
+				alert('OOPA! ALGO DEU ERRADO...', error)
 			})		
 	}
 
